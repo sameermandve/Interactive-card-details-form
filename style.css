@@ -1,1 +1,78 @@
+* {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+:root {
+  /* Primary */
+  --Linear-Gradient-1: hsl(249, 99%, 64%); /* (active input border) */
+  /* to */
+  --Linear-Gradient-2: hsl(278, 94%, 30%); /* (active input border) */
+
+  --Red: hsl(0, 100%, 66%); /* (input errors) */
+
+  /* Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Light-Grayish-Violet: hsl(270, 3%, 87%);
+  --Dark-Grayish-Violet: hsl(279, 6%, 55%);
+  --Very-Dark-Violet: hsl(278, 68%, 11%);
+}
+
+body {
+  min-height: 100vh;
+}
+
+#wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  position: relative;
+}
+
+#bg-img-desktop {
+  width: 32%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -999;
+}
+
+#bg-img-mobile {
+  display: none;
+}
+
+#card-preview {
+  margin-top: 13%;
+  margin-left: 16%;
+}
+
+#card-front-container {
+  position: relative;
+  width: 447px;
+  height: 245px;
+}
+
+#full-name-preview {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#exp-date-preview {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#card-no-preview {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.success-hidden {
+  display: none;
+}
