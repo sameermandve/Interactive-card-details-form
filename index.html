@@ -31,7 +31,7 @@
             src="assets/images/bg-card-front.png"
             alt="card-front"
           />
-          <img src="assets/images/card-logo.svg" alt="logo" />
+          <img id="logo-img" src="assets/images/card-logo.svg" alt="logo" />
           <p id="card-no-preview">0000 0000 0000 0000</p>
           <p id="full-name-preview">Jane Appleseed</p>
           <p id="exp-date-preview">00/00</p>
@@ -49,7 +49,7 @@
 
       <section class="form-hidden" id="card-form">
         <form id="form" action="z">
-          <div class="input-container">
+          <div class="input-container" id="name-div">
             <label for="full-name">CARDHOLDER NAME</label>
             <input
               type="text"
@@ -60,7 +60,7 @@
             <p class="error-msg">Error</p>
           </div>
 
-          <div class="input-container">
+          <div class="input-container" id="cardNo-div">
             <label for="card-no">CARD NUMBER</label>
             <input
               type="number"
@@ -71,32 +71,34 @@
             <p class="error-msg">Error</p>
           </div>
 
-          <div class="input-container">
-            <label for="exp-date">EXP. DATE (MM/YY)</label>
-            <input
-              type="number"
-              id="exp-month"
-              name="exp-month"
-              placeholder="MM"
-            />
-            <input
-              type="number"
-              id="exp-year"
-              name="exp-year"
-              placeholder="YY"
-            />
-            <p class="error-msg">Error</p>
-          </div>
+          <div id="grid-container">
+            <div class="input-container" id="exp-date-div">
+              <label for="exp-date">EXP. DATE (MM/YY)</label>
+              <input
+                type="number"
+                id="exp-month"
+                name="exp-month"
+                placeholder="MM"
+              />
+              <input
+                type="number"
+                id="exp-year"
+                name="exp-year"
+                placeholder="YY"
+              />
+              <p class="error-msg">Error</p>
+            </div>
 
-          <div class="input-container">
-            <label for="cvc-no">CVC</label>
-            <input
-              type="number"
-              id="cvc-no"
-              name="cvc-no"
-              placeholder="e.g. 123"
-            />
-            <p class="error-msg">Error</p>
+            <div class="input-container" id="cvc-div">
+              <label for="cvc-no">CVC</label>
+              <input
+                type="number"
+                id="cvc-no"
+                name="cvc-no"
+                placeholder="e.g. 123"
+              />
+              <p class="error-msg">Error</p>
+            </div>
           </div>
 
           <button id="submit-btn">Confirm</button>

@@ -30,6 +30,8 @@ body {
   display: grid;
   grid-template-columns: 55% 45%;
   position: relative;
+  background-color: var(--White);
+  z-index: -999;
 }
 
 #bg-img-desktop {
@@ -37,7 +39,7 @@ body {
   height: 100%;
   position: absolute;
   left: 0;
-  z-index: -999;
+  z-index: -99;
 }
 
 #bg-img-mobile {
@@ -45,7 +47,7 @@ body {
 }
 
 #card-preview {
-  margin-top: 13%;
+  margin-top: 15%;
   margin-left: 16%;
 }
 
@@ -57,22 +59,89 @@ body {
 
 #full-name-preview {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 28px;
+  left: 30px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--White);
 }
 
 #exp-date-preview {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 28px;
+  right: 30px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--White);
 }
 
 #card-no-preview {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 51%;
+  left: 43px;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--White);
 }
 
-.success-hidden {
+#logo-img {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+#card-back-container {
+  position: relative;
+  width: 447px;
+  height: 245px;
+  margin-top: 1.75rem;
+  margin-left: 6rem;
+}
+
+#cvc-preview {
+  position: absolute;
+  right: 65px;
+  top: 110px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--White);
+}
+
+/* #card-form {
+  margin-top: 24%;
+  margin-left: 6%;
+  margin-right: 17%;
+}
+
+#form {
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container label {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--Very-Dark-Violet);
+}
+
+.input-container input {
+  padding: 0.7rem 1rem;
+}
+
+/* .input-container input :focus {
+  outline: none;
+} */
+
+#grid-container {
+  display: flex;
+  justify-content: space-between;
+}
+*/ .success-hidden {
   display: none;
 }
