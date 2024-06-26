@@ -32,9 +32,14 @@
             alt="card-front"
           />
           <img id="logo-img" src="assets/images/card-logo.svg" alt="logo" />
-          <p id="card-no-preview">0000 0000 0000 0000</p>
+          <p id="card-no-preview">
+            <span id="first">0000</span> <span id="second">0000</span>
+            <span id="third">0000</span> <span id="fourth">0000</span>
+          </p>
           <p id="full-name-preview">Jane Appleseed</p>
-          <p id="exp-date-preview">00/00</p>
+          <p id="exp-date-preview">
+            <span id="month">00</span>/<span id="year">00</span>
+          </p>
         </div>
 
         <div id="card-back-container">
@@ -48,27 +53,31 @@
       </section>
 
       <section class="form-hidden" id="card-form">
-        <form id="form" action="z">
+        <form id="form" action="z" novalidate>
           <div class="input-container" id="name-div">
-            <label for="full-name">CARDHOLDER NAME</label>
-            <input
-              type="text"
-              id="full-name"
-              name="full-name"
-              placeholder="e.g. Jane Appleseed"
-            />
-            <p class="error-msg">Error</p>
+            <div class="input-control">
+              <label for="full-name">CARDHOLDER NAME</label>
+              <input
+                type="text"
+                id="full-name"
+                name="full-name"
+                placeholder="e.g. Jane Appleseed"
+              />
+            </div>
+            <p class="error-msg"></p>
           </div>
 
           <div class="input-container" id="cardNo-div">
-            <label for="card-no">CARD NUMBER</label>
-            <input
-              type="number"
-              id="card-no"
-              name="card-no"
-              placeholder="e.g. 1234 5678 9123 0000"
-            />
-            <p class="error-msg">Error</p>
+            <div class="input-control">
+              <label for="card-no">CARD NUMBER</label>
+              <input
+                type="text"
+                id="card-no"
+                name="card-no"
+                placeholder="e.g. 1234 5678 9123 0000"
+              />
+            </div>
+            <p class="error-msg"></p>
           </div>
 
           <div id="grid-container">
@@ -88,18 +97,20 @@
                   placeholder="YY"
                 />
               </div>
-              <p class="error-msg">Error</p>
+              <p class="error-msg"></p>
             </div>
 
             <div class="input-container" id="cvc-div">
-              <label for="cvc-no">CVC</label>
-              <input
-                type="number"
-                id="cvc-no"
-                name="cvc-no"
-                placeholder="e.g. 123"
-              />
-              <p class="error-msg">Error</p>
+              <div class="input-control">
+                <label for="cvc-no">CVC</label>
+                <input
+                  type="number"
+                  id="cvc-no"
+                  name="cvc-no"
+                  placeholder="e.g. 123"
+                />
+              </div>
+              <p class="error-msg"></p>
             </div>
           </div>
 

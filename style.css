@@ -79,7 +79,7 @@ body {
 #card-no-preview {
   position: absolute;
   top: 51%;
-  left: 43px;
+  left: 48px;
   font-size: 2rem;
   font-weight: 500;
   color: var(--White);
@@ -129,14 +129,19 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.input-container label {
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
   margin-bottom: 0.5rem;
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--Very-Dark-Violet);
 }
 
-.input-container input {
+input {
   padding: 0.7rem 1rem;
   border: 2px solid var(--Light-Grayish-Violet);
   border-radius: 6px;
@@ -145,16 +150,16 @@ body {
   color: var(--Very-Dark-Violet);
 }
 
-.input-container input:hover {
+input:hover {
   cursor: pointer;
   border-color: var(--Linear-Gradient-2);
 }
 
-.input-container input:focus {
+input:focus {
   outline: none;
 }
 
-.input-container input::-webkit-input-placeholder {
+input::-webkit-input-placeholder {
   color: var(--Light-Grayish-Violet);
 }
 
@@ -165,10 +170,15 @@ input::-webkit-inner-spin-button {
 }
 
 .error-msg {
+  display: none;
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--Red);
   margin-top: 0.3rem;
+}
+
+.error-msg.msg-show {
+  display: block;
 }
 
 #grid-container {
@@ -216,15 +226,7 @@ input::-webkit-inner-spin-button {
   );
 }
 
-/* .form-hidden {
-  display: none;
-} */
-
 /* Success Message */
-
-.success-hidden {
-  display: none;
-}
 
 #card-success {
   display: none;
@@ -300,7 +302,7 @@ input::-webkit-inner-spin-button {
     margin-top: 0;
     margin-left: 0;
     position: relative;
-    margin-bottom: 50%;
+    margin-bottom: 80%;
   }
 
   #card-back-container {
@@ -309,8 +311,8 @@ input::-webkit-inner-spin-button {
     margin-top: 0;
     margin-left: 0;
     position: absolute;
-    top: 25px;
-    right: 16px;
+    top: 55px;
+    right: 25px;
     z-index: -11;
   }
 
@@ -329,8 +331,8 @@ input::-webkit-inner-spin-button {
     width: 300px;
     height: 164.42px;
     position: absolute;
-    top: 120px;
-    left: 30px;
+    top: 150px;
+    left: 22px;
     z-index: 1;
   }
 
@@ -361,5 +363,70 @@ input::-webkit-inner-spin-button {
     top: 50%;
     left: 37px;
     font-size: 1.25rem;
+  }
+
+  #card-form {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 2.5rem 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  #form {
+    max-width: 100%;
+  }
+
+  .input-container label {
+    font-size: 1rem;
+  }
+
+  .input-container input {
+    padding: 0.7rem 0.9rem;
+    font-size: 1.15rem;
+  }
+
+  .error-msg {
+    font-size: 1rem;
+  }
+
+  #grid-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #exp-date-div {
+    margin-right: 0;
+  }
+
+  #cvc-div {
+    max-width: 160px;
+  }
+
+  #submit-btn {
+    margin-top: 2rem;
+  }
+
+  #card-success {
+    margin: 4rem 0;
+    padding: 0 3.5rem;
+  }
+
+  #card-success h1 {
+    font-size: 2rem;
+  }
+
+  #card-success p {
+    font-size: 1.1rem;
+  }
+
+  #dismiss-btn {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    #cvc-div {
+      max-width: 117px;
+    }
   }
 }
