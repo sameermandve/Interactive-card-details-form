@@ -1,6 +1,6 @@
 # Interactive-card-details-form
 
-This is a solution of [Interactive Card Details Form challenge from Frontend Mentor](https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl)
+This is a solution of [Interactive Card Details Form challenge from Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw)
 
 Created by Sameer Mandve.
 
@@ -30,8 +30,8 @@ This is practice responsive "Interactive Card Details Form" created using HTML ,
 
 ### Links -
 
-- Live Site : https://news-home-page-plum.vercel.app/
-- Git Repo : https://github.com/sameermandve/News-Home-Page.git
+- Live Site : https://interactive-card-details-form-five-weld.vercel.app/
+- Git Repo : https://github.com/sameermandve/Interactive-card-details-form.git
 
 ### Built using -
 
