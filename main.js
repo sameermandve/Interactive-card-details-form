@@ -5,6 +5,26 @@ const expMonth = document.querySelector("#exp-month");
 const expYear = document.querySelector("#exp-year");
 const cvcNo = document.querySelector("#cvc-no");
 
+fullName.addEventListener("input", () => {
+  let fullNamePreview = document.querySelector("#full-name-preview");
+  fullNamePreview.innerText = fullName.value;
+});
+
+expMonth.addEventListener("input", () => {
+  let monthPreview = document.querySelector("#month");
+  monthPreview.innerText = expMonth.value;
+});
+
+expYear.addEventListener("input", () => {
+  let yearPreview = document.querySelector("#year");
+  yearPreview.innerText = expYear.value;
+});
+
+cvcNo.addEventListener("input", () => {
+  let cvcNoPreview = document.querySelector("#cvc-preview");
+  cvcNoPreview.innerText = cvcNo.value;
+});
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -21,6 +41,18 @@ form.addEventListener("submit", (e) => {
       cardForm.classList.remove("form-hide");
       cardSuccess.classList.remove("success-show");
       form.reset();
+
+      let fullNamePreview = document.querySelector("#full-name-preview");
+      let monthPreview = document.querySelector("#month");
+      let yearPreview = document.querySelector("#year");
+      let cvcNoPreview = document.querySelector("#cvc-preview");
+      const dummyCardNo = "0000000000000000";
+
+      fullNamePreview.innerText = "Jane Appleseed";
+      monthPreview.innerText = "00";
+      yearPreview.innerText = "00";
+      cvcNoPreview.innerText = "123";
+      divideEqual(dummyCardNo);
     });
   }
 });
@@ -80,11 +112,6 @@ const validateCardInfo = () => {
   const expYearValue = expYear.value.trim();
   const cvcNoValue = cvcNo.value.trim();
 
-  let fullNamePreview = document.querySelector("#full-name-preview");
-  let monthPreview = document.querySelector("#month");
-  let yearPreview = document.querySelector("#year");
-  let cvcNoPreview = document.querySelector("#cvc-preview");
-
   const date = new Date();
   let currentYear = date.getFullYear();
 
@@ -95,7 +122,6 @@ const validateCardInfo = () => {
     errorCount += 1;
   } else {
     setSuccess(fullName);
-    fullNamePreview.innerText = fullNameValue;
     setDefault(fullName);
   }
 
@@ -104,11 +130,9 @@ const validateCardInfo = () => {
     errorCount += 1;
   } else if (cvcNoValue.length != 3) {
     setError(cvcNo, "CVC must contain 3 digits");
-    cvcNoPreview.innerText = "123";
     errorCount += 1;
   } else {
     setSuccess(cvcNo);
-    cvcNoPreview.innerText = cvcNoValue;
     setDefault(cvcNo);
   }
 
@@ -136,15 +160,11 @@ const validateCardInfo = () => {
     errorCount += 1;
   } else {
     setSuccess(expMonth);
-    monthPreview.innerText = expMonthValue;
     setDefault(expMonth);
   }
 
   if (expYearValue === "") {
     setError(expYear, "Can't be blank");
-    errorCount += 1;
-  } else if (expYearValue.length === 3 || expYearValue.length === 1) {
-    setError(expYear, "Wrong Date");
     errorCount += 1;
   } else if (expYearValue.length > 4) {
     setError(expYear, "Wrong Date");
@@ -154,7 +174,6 @@ const validateCardInfo = () => {
     errorCount += 1;
   } else {
     setSuccess(expYear);
-    yearPreview.innerText = expYearValue;
     setDefault(expYear);
   }
 
